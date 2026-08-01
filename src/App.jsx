@@ -36,14 +36,25 @@ function App() {
     setTasks(newTasks);
   }
 
+  function onDeleteTaskClick(taskId) {
+    //usamos o sinal de diferente (!), pois O filter() mantém os elementos que retornam true
+    const newTasks = tasks.filter((task) => task.id !== taskId);
+    //Atualiza o estado, atualizando também a interface.
+    setTasks(newTasks);
+  }
+
   return (
-    <div className="w-screen h-[100%] bg-slate-500 flex justify-center p-6 overflow-x-hidden">
+    <div className="w-screen h-screen bg-slate-500 flex justify-center p-6 overflow-x-hidden">
       <div className="w-[500px]">
         <h1 className="text-3xl text-slate-100 font-bold text-center">
           Gerenciador de tarefas
         </h1>
         <AddTask />
-        <Task tasks={tasks} onTaskClick={onTaskClick} />
+        <Task
+          tasks={tasks}
+          onTaskClick={onTaskClick}
+          onDeleteTaskClick={onDeleteTaskClick}
+        />
       </div>
     </div>
   );
