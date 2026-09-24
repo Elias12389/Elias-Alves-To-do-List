@@ -35,4 +35,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 4. **Abra no navegador:**
    Acesse http://localhost:5173 (ou a porta indicada no terminal).
 
+## Autor
+> Projeto desenvolvido durante o curso de ReactJS do Felipe Rocha.   
+
  
